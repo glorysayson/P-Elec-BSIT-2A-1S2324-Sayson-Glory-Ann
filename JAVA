@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class GreetingProgram {
+    private String name;
+
+    // Getter for the name variable
+    public String getName() {
+        return name;
+    }
+
+    // Setter for the name variable
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public static void main(String[] args) {
+        // Create a Scanner object to read user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Create an instance of GreetingProgram
+        GreetingProgram program = new GreetingProgram();
+
+        // Prompt the user to enter their name
+        System.out.print("Name: ");
+
+        // Read the user's name as input
+        String inputName = scanner.nextLine();
+
+        // Set the name using the setter
+        program.setName(inputName);
+
+        // Display a greeting message using the getter to retrieve the name
+        System.out.println("Hello, " + program.getName() + "! Welcome to the Java Greeting Program.");
+
+        // Close the Scanner to prevent resource leaks
+        scanner.close();
+    }
+}
